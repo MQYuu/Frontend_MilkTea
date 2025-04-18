@@ -1,0 +1,121 @@
+/* Tổng thể căn giữa màn hình đăng nhập */
+.login-container {
+  display: flex; /* Dùng flexbox để dễ căn chỉnh */
+  justify-content: center; /* Căn giữa theo chiều ngang */
+  align-items: center; /* Căn giữa theo chiều dọc */
+  height: 100vh; /* Chiều cao bằng 100% viewport */
+  background-color: #f4f4f4; /* Màu nền xám nhạt */
+}
+
+/* Hộp đăng nhập */
+.login-box {
+  background: white; /* Nền trắng */
+  padding: 20px; /* Khoảng cách bên trong */
+  border-radius: 8px; /* Bo tròn góc */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Hiệu ứng đổ bóng */
+  text-align: center; /* Căn giữa nội dung */
+  width: 350px; /* Độ rộng cố định */
+}
+
+/* Tiêu đề của form */
+h1 {
+  font-size: 24px; /* Kích thước chữ */
+  color: #333; /* Màu chữ xám đậm */
+  margin-bottom: 20px; /* Khoảng cách với phần tử dưới */
+}
+
+/* Nhóm chứa label và input */
+.form-group {
+  text-align: left; /* Căn trái nội dung */
+  margin-bottom: 15px; /* Tạo khoảng cách giữa các nhóm */
+}
+
+.form-group label {
+  font-weight: bold; /* Chữ đậm */
+  display: block; /* Để label nằm trên input */
+  margin-bottom: 5px; /* Khoảng cách giữa label và input */
+}
+
+.form-group input {
+  width: 100%; /* Input full chiều ngang của form */
+  padding: 8px; /* Tăng khoảng cách bên trong */
+  border: 1px solid #ccc; /* Viền xám nhạt */
+  border-radius: 5px; /* Bo tròn góc */
+  font-size: 16px; /* Kích thước chữ */
+  transition: 0.3s; /* Hiệu ứng mượt khi thay đổi */
+}
+
+/* Khi input được focus */
+.form-group input:focus {
+  border-color: #007bff; /* Đổi màu viền sang xanh */
+  outline: none; /* Xóa viền mặc định của trình duyệt */
+}
+
+/* Nút đăng nhập */
+.login-button {
+  width: 100%; /* Full chiều ngang */
+  padding: 10px; /* Tăng chiều cao */
+  background-color: #007bff; /* Màu xanh */
+  color: white; /* Chữ màu trắng */
+  font-size: 16px; /* Cỡ chữ */
+  border: none; /* Xóa viền */
+  border-radius: 5px; /* Bo góc */
+  cursor: pointer; /* Hiển thị icon bàn tay khi hover */
+  transition: 0.3s; /* Hiệu ứng hover mượt */
+}
+
+/* Khi rê chuột vào nút đăng nhập */
+.login-button:hover {
+  background-color: #0056b3; /* Đổi màu nền xanh đậm hơn */
+}
+
+/* Phần đăng ký */
+.register-text {
+  margin-top: 10px; /* Khoảng cách với nút đăng nhập */
+}
+
+/* Link đăng ký */
+.register-text a {
+  color: #007bff; /* Màu xanh */
+  text-decoration: none; /* Bỏ gạch chân */
+}
+
+/* Khi hover vào link đăng ký */
+.register-text a:hover {
+  text-decoration: underline; /* Thêm gạch chân khi hover */
+}
+
+/* Container chứa hai nút Logout và Profile */
+.button-container {
+  display: flex; /* Dùng flexbox để dễ căn chỉnh */
+  flex-direction: column; /* Sắp xếp theo chiều dọc */
+  align-items: center; /* Căn giữa theo chiều ngang */
+  gap: 10px; /* Khoảng cách giữa hai nút */
+}
+
+/* Style chung cho nút Logout và Profile */
+.logout-button, 
+.router-link-profile {
+  position: relative; /* Quan trọng để hiệu ứng ::after hoạt động */
+  display: inline-block; /* Giúp nút không bị kéo dài */
+  padding: 10px 15px; /* Khoảng cách bên trong */
+  font-size: 16px; /* Cỡ chữ */
+  font-weight: bold; /* Chữ đậm */
+  min-width: 180px; /* Đảm bảo hai nút bằng nhau */
+  text-align: center; /* Căn giữa chữ */
+  border-radius: 5px; /* Bo tròn góc */
+  text-decoration: none; /* Bỏ gạch chân */
+  color: #348947; /* Màu xanh lá */
+  background-color: transparent; /* Không có màu nền */
+  transition: all 0.3s ease-in-out; /* Hiệu ứng hover mượt */
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2); /* Hiệu ứng đổ bóng */
+  border: none; /* Xóa viền */
+  box-sizing: border-box; /* Đảm bảo padding không làm thay đổi kích thước */
+}
+
+/* Hiệu ứng hover: đẩy nút lên và tăng đổ bóng */
+.logout-button:hover, 
+.router-link-profile:hover {
+  transform: translateY(-3px); /* Nâng lên 3px để tạo hiệu ứng nổi */
+  box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.3); /* Đổ bóng mạnh hơn */
+}

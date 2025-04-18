@@ -1,6 +1,8 @@
 import axios from 'axios';
 
 const API_URL = `${import.meta.env.VITE_API_URL}/products`
+console.log(`${import.meta.env.VITE_API_URL}/products`);
+
 
 
 // Hàm để lấy danh sách sản phẩm

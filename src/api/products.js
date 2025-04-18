@@ -1,6 +1,7 @@
 import axios from 'axios';
 
-const API_URL = 'http://localhost:3001/products'; // Địa chỉ của backend
+const API_URL = `${import.meta.env.VITE_API_URL}/products`
+
 
 // Hàm để lấy danh sách sản phẩm
 export const getProducts = async () => {

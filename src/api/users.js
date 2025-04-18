@@ -1,6 +1,7 @@
 import axios from "axios";
 
-const API_URL = "http://localhost:3001/users"; // Địa chỉ của backend
+const API_URL = `${import.meta.env.VITE_API_URL}/users`
+
 
 // Gửi request đăng nhập 
 export const loginUser = async (email, password) => {

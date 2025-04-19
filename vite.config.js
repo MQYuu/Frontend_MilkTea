@@ -6,7 +6,7 @@ export default defineConfig({
   plugins: [vue()],
   server: {
     proxy: {
-
+      target: process.env.VITE_API_URL
     },
   },
 })

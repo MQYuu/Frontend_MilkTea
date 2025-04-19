@@ -38,6 +38,7 @@
 import { ref, computed, onMounted } from 'vue'
 import AddToCartButton from './AddToCartButton.vue'
 
+
 // Hàm định dạng giá tiền theo chuẩn Việt Nam
 const formatPrice = (price) => {
   const numberPrice = Number(price) * 1.0 // Chuyển đổi về số để tránh lỗi
@@ -57,7 +58,10 @@ const itemsPerPage = 10
 // Khi component được tải lần đầu tiên, gọi API để lấy danh sách sản phẩm
 onMounted(async () => {
   try {
-    const response = await fetch('/products') // Gọi API lấy dữ liệu sản phẩm
+    const url = `${import.meta.env.VITE_API_URL}/products`
+
+    const response = await fetch(url)
+
     const data = await response.json()
     products.value = data // Gán dữ liệu vào biến products
   } catch (error) {

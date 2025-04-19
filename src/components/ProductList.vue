@@ -57,7 +57,7 @@ const itemsPerPage = 10
 // Khi component được tải lần đầu tiên, gọi API để lấy danh sách sản phẩm
 onMounted(async () => {
   try {
-    const response = await fetch('/api/products') // Gọi API lấy dữ liệu sản phẩm
+    const response = await fetch('/products') // Gọi API lấy dữ liệu sản phẩm
     const data = await response.json()
     products.value = data // Gán dữ liệu vào biến products
   } catch (error) {
